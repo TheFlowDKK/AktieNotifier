@@ -1,0 +1,11 @@
+-- Write stock on the second line. (Seperated by comma)
+17351617-unity-software,16121893-coca-cola-co
+
+-- Write time between stock change checks in seconds on fifth line.
+300
+
+-- Stock raise before message in percent
+3
+
+-- Stock drop before message in percent
+2.5
