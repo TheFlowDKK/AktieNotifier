@@ -38,10 +38,10 @@ def sendMessage(message):
     sent = False
     while sent == False:
         if pn.send_text(message) == 200:
-            print("Sendte besked")
+            write(log, "=== Sendte besked ===", datetime.now().strftime("%H:%M:%S"))
             sent = True
         else:
-            print("Kunne ikke sende besked.")
+            write(log, "!!! Kunne ikke sende besked !!!", datetime.now().strftime("%H:%M:%S"))
             sleep(5)
 
 def scrape(stock):
