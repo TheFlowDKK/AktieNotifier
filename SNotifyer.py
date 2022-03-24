@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 with open("config", "r") as f:
     lines = f.readlines()
     stock = lines[1].strip().split(",")
-    sleepTime = int(lines[4].strip())
+    sleepTime = float(lines[4].strip())
     baseURL = "https://www.nordnet.dk/markedet/aktiekurser/"
     stockRaise = float(lines[7].strip())
     stockDrop = float(lines[10].strip())
