@@ -2,10 +2,13 @@
 17351617-unity-software,16121893-coca-cola-co
 
 -- Write time between stock change checks in seconds on fifth line.
-300
+5
 
 -- Stock raise before message in percent
-3
+2.5
 
 -- Stock drop before message in percent
 2.5
+
+-- Logs 1 or 0 (true or false)
+1
