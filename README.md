@@ -1,5 +1,5 @@
 # AktieNotifier
-## A stock notifier
+**A stock notifier**
 
 ### Setup
 
