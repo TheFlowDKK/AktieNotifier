@@ -54,12 +54,12 @@ def scrape(stock):
 def checkPercent(lastPercent, currentPercent, min, max, stock, number):
     if currentPercent >= lastPercent + max:
         percent[number] = currentPercent
-        sendMessage(stock + " er steget med " + str(currentPercent-lastPercent) + "%")
-        write(log, "+++ Stigning: " + stock + " " + str(currentPercent-lastPercent) + "% +++\n", datetime.now().strftime("%H:%M:%S"))
+        sendMessage(stock + " er steget med " + str(round(currentPercent-lastPercent, 2)) + "%")
+        write(log, "+++ Stigning: " + stock + " " + str(round(currentPercent-lastPercent, 2)) + "% +++\n", datetime.now().strftime("%H:%M:%S"))
     elif currentPercent <= lastPercent - min:
         percent[number] = currentPercent
-        sendMessage(stock + " er faldet med " + str(lastPercent-currentPercent) + "%")
-        write(log, "--- Fald: " + stock + " " + str(lastPercent-currentPercent) + "% ---\n", datetime.now().strftime("%H:%M:%S"))
+        sendMessage(stock + " er faldet med " + str(round(lastPercent-currentPercent, 2)) + "%")
+        write(log, "--- Fald: " + stock + " " + str(round(lastPercent-currentPercent, 2)) + "% ---\n", datetime.now().strftime("%H:%M:%S"))
     else:
         write(log, "%%% Saved percentage " + stock + ": " + str(percent[number]) + " %%%", datetime.now().strftime("%H:%M:%S"))
         write(log, "%%% Current percentage " + stock + ": " + str(currentPercent) + " %%% \n", datetime.now().strftime("%H:%M:%S"))
